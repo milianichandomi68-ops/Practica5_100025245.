@@ -1,0 +1,31 @@
+/* =========================================================
+   ARCHIVO CSS EXTERNO - Práctica 5
+   Este archivo se enlaza desde index.html mediante:
+   <link rel="stylesheet" href="styles.css">
+   ========================================================= */
+
+.externo-demo {
+  font-style: italic;
+  background-color: #e8f5d3;
+  border: 2px dashed #9fd35a;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* Estilo adicional para reforzar los enlaces, si se agregan */
+a {
+  color: #b5443b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Ajuste responsivo simple */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+}

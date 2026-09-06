@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 5 - Introducción al uso de CSS</title>
+
+  <!-- ============================================= -->
+  <!-- EJERCICIO 2: CSS INTERNO (embebido con <style>) -->
+  <!-- ============================================= -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background-color: #f4f1ea;
+      color: #2b2b2b;
+    }
+
+    header {
+      background-color: #3b2f1e;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #9fd35a;
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      color: #f5a623;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    section {
+      background-color: #ffffff;
+      border-left: 6px solid #f5a623;
+      border-radius: 6px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      color: #3b2f1e;
+      border-bottom: 2px solid #9fd35a;
+      padding-bottom: 8px;
+    }
+
+    /* Selector de clase */
+    .destacado {
+      color: #b5443b;
+      font-weight: bold;
+    }
+
+    /* Selector de id */
+    #codigo-ejemplo {
+      background-color: #2b2b2b;
+      color: #9fd35a;
+      font-family: "Courier New", monospace;
+      padding: 15px;
+      border-radius: 5px;
+      display: block;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #3b2f1e;
+      color: #f4f1ea;
+      font-size: 0.9rem;
+    }
+  </style>
+
+  <!-- ============================================= -->
+  <!-- EJERCICIO 3: CSS EXTERNO (archivo enlazado) -->
+  <!-- ============================================= -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>PRÁCTICA 5</h1>
+    <p>Objetivo: conocer e implementar el uso del CSS</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>¿Qué es CSS?</h2>
+      <p>
+        CSS (<span class="destacado">Cascading Style Sheets</span>, u Hojas de
+        Estilo en Cascada) es la tecnología desarrollada por el
+        <span class="destacado">World Wide Web Consortium (W3C)</span> con el
+        fin de separar la estructura de la presentación en un documento web.
+      </p>
+      <p>
+        En otras palabras: el HTML se encarga del <strong>contenido</strong>
+        y el CSS se encarga del <strong>estilo visual</strong> (colores,
+        tamaños, posición, tipografías, etc.).
+      </p>
+    </section>
+
+    <section>
+      <h2>Ejercicio 1: CSS en línea (inline)</h2>
+      <p>
+        Este párrafo utiliza el atributo <code>style</code> directamente
+        dentro de la etiqueta HTML, sin necesidad de bloques
+        <code>&lt;style&gt;</code> ni archivos externos.
+      </p>
+      <p style="color: white; background-color: #b5443b; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold;">
+        Soy un párrafo con estilo en línea (inline). Mi color, fondo y
+        alineación se definieron directamente en el atributo style.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ejercicio 2: CSS interno (embebido)</h2>
+      <p>
+        Todo el diseño de esta página (colores del encabezado, las tarjetas
+        blancas, los bordes, etc.) se definió usando un bloque
+        <code>&lt;style&gt;&lt;/style&gt;</code> colocado dentro del
+        <code>&lt;head&gt;</code> del documento, tal como se explicó en la
+        diapositiva de la práctica.
+      </p>
+      <code id="codigo-ejemplo">&lt;style type="text/css"&gt;
+  p {
+    color: red;
+  }
+&lt;/style&gt;</code>
+    </section>
+
+    <section>
+      <h2>Ejercicio 3: CSS externo</h2>
+      <p>
+        Este párrafo (y esta sección) reciben parte de su estilo desde un
+        archivo separado llamado <code>styles.css</code>, enlazado con la
+        etiqueta <code>&lt;link&gt;</code> dentro del <code>&lt;head&gt;</code>.
+        Esta es la forma más recomendada de trabajar con CSS en proyectos
+        reales, porque separa por completo el contenido del diseño.
+      </p>
+      <p class="externo-demo">
+        Si ves este texto en cursiva, con un fondo distinto y un borde
+        punteado, significa que el archivo <strong>styles.css</strong> se
+        cargó correctamente. 🎉
+      </p>
+    </section>
+
+    <section>
+      <h2>Ventajas de usar CSS externo</h2>
+      <ul>
+        <li>Un solo archivo controla el diseño de todas las páginas del sitio.</li>
+        <li>Facilita el mantenimiento y la actualización del diseño.</li>
+        <li>Reduce la duplicación de código.</li>
+        <li>Las páginas cargan más rápido (menos código repetido).</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    Práctica 5 · Miliani Karley Chandomi Palacios · Matrícula 100025245 · UNACH
+  </footer>
+
+</body>
+</html>
